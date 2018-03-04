@@ -1,0 +1,24 @@
+<div class="panel panel-primary">
+  <div class="panel-body">
+    <div class="table-responsive">
+      <table class="table" *ngIf="videos && videos.length > 0">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Length</th>
+            <th>Video</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let video of videos">
+            <td>{{ video.id }}</td>
+            <td>{{ video.title }}</td>
+            <td>{{ video.artist }}</td>
+            <td><app-video [video]="video"></app-video></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
